@@ -4,12 +4,19 @@
 #include <string>
 #include "FlightNode.h"
 
-class HubNode{
+using namespace std;
+
+class FlightNode;
+
+class HubNode{ // May want to consider making some var private
 	public:
 		string name;
 		string location;
 		HubNode *next;
-		FlightNode* headFlights;
-} *headHub = NULL;
+		FlightNode* headFlights;  
+		virtual ~HubNode();
+};
+
+extern HubNode *headHub;
 
 #endif
